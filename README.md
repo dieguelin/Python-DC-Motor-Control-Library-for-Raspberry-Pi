@@ -4,13 +4,13 @@ Welcome to the DC Motor Control Library designed for the Raspberry Pi 4 utilizin
 
 # Introductory concepts
 
+PID Control: The library incorporates PID (Proportional-Integral-Derivative) control techniques to optimize motor performance. PID controllers use feedback from encoders to adjust motor commands dynamically, ensuring stable and accurate motor control, particularly under varying load conditions.
+
 Pulse Width Modulation (PWM): PWM is an effective way to control motor speed and direction by varying the width of the pulses, enabling precise adjustments in motor operations.
 
 Interrupts: Handling real-time events accurately is crucial in motor control. This library uses interrupts to promptly manage tasks like speed monitoring and direction changes, enhancing overall system responsiveness.
 
 DC Motor with Encoder: Encoders provide necessary feedback for accurate control over motor position and speed, which is indispensable for closed-loop control systems.
-
-PID Control: The library incorporates PID (Proportional-Integral-Derivative) control techniques to optimize motor performance. PID controllers use feedback from encoders to adjust motor commands dynamically, ensuring stable and accurate motor control, particularly under varying load conditions.
 
 
 # Features
