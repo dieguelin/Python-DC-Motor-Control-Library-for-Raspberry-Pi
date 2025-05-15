@@ -32,7 +32,8 @@ Motor driver : L298N https://www.cimech3d.cl/producto/driver-l298n-doble-acciona
 ![Alt Text](H-bridge-driver.jpg)
 
 Motors: DC brushed motors with incremental encoder:  https://www.amazon.com/uxcell-Motor-Encoder-463RPM-Ratio/dp/B0792T5445
-![Alt Text](dc_motor.png)
+<img src="dc_motor.png" alt="Alt Text" width="200" height="auto">
+
 
 # Getting started
 
