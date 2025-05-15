@@ -29,6 +29,7 @@ This library assumes the use of incremental motor encoders. For more information
 You can you any motor driver and DC motors you desire, provided you understand how to use them. For our example the following hardware is used:
 
 Motor driver : L298N https://www.cimech3d.cl/producto/driver-l298n-doble-accionamiento-para-arduino/
+![Alt Text](H-bridge-driver.png)
 Motors: DC brushed motors with incremental encoder:  https://www.amazon.com/uxcell-Motor-Encoder-463RPM-Ratio/dp/B0792T5445
 
 # Getting started
