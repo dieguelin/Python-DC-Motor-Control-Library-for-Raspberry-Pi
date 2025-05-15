@@ -25,7 +25,7 @@ PID Parameters Customization: The library offers flexibility in defining PID con
 
 This library assumes the use of incremental motor encoders. For more information, refer to the following source: https://www.dynapar.com/technology/encoder_basics/motor_encoders/
 
-# Hardware
+# Example Hardware
 You can you any motor driver and DC motors you desire, provided you understand how to use them. For our example the following hardware is used:
 
 Motor driver : L298N https://www.cimech3d.cl/producto/driver-l298n-doble-accionamiento-para-arduino/
