@@ -36,3 +36,5 @@ Motors: DC brushed motors with incremental encoder:  https://www.amazon.com/uxce
 
 # Circuit schematic
 Provided bellow is an example implementation of the hardware wiring between the Raspberry Pi 4, two DC brushed motors with their encoders, and the L298N motor driver. This library is not limited to the hardware used in the example implementation.
+
+![Alt Text](circuit_schematic.png)
