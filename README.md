@@ -35,8 +35,10 @@ Motor driver : L298N https://www.cimech3d.cl/producto/driver-l298n-doble-acciona
 </div>
 
 Motor: DC brushed motor with incremental encoder:  https://www.amazon.com/uxcell-Motor-Encoder-463RPM-Ratio/dp/B0792T5445
-<img src="dc_motor.png" alt="Alt Text" width="500" height="auto">
 
+<div align="center">
+  <img src="dc_motor.png" alt="Alt Text"  width="500" height="auto">
+</div>
 
 # Getting started
 
@@ -44,4 +46,6 @@ Motor: DC brushed motor with incremental encoder:  https://www.amazon.com/uxcell
 # Circuit schematic
 Provided bellow is an example implementation of the hardware wiring between the Raspberry Pi 4, two DC brushed motors with their encoders, and the L298N motor driver. This library is not limited to the hardware used in the example implementation.
 
-<img src="circuit_schematic.png" alt="Alt Text" width="500" height="auto">
+<div align="center">
+  <img src="circuit_schematic.png" alt="Alt Text"  width="500" height="auto">
+</div>
