@@ -17,7 +17,7 @@ For more information about controlling DC brushed motors with encoders, refer to
 
 # Features
 
-Port Mapping and Instantiation: The library provides a class where you can instantiate port mappings, allowing for customized configuration aligned with your specific hardware setup.
+Port Mapping and Instantiation: The library provides a class where you can configure port mappings for setting up PWM (pulse width modulation) output pins and input pins for motor encoder in the Raspberry Pi 4.
 
 Control Methods: Utilize intuitive control methods such as .move(degrees) to specify precise motor movements, enhancing ease of use in motor management tasks.
 
