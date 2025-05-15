@@ -1,6 +1,6 @@
 # Python-DC-Motor-Control-Library-for-Raspberry-Pi
 
-Welcome to the DC Motor Control Library designed for the Raspberry Pi 4 utilizing Python. This library provides robust functionality for controlling DC motors using Pulse Width Modulation (PWM), and is tailored for use with drivers such as the L298N motor driver. To successfully use this library, you'll need to grasp the following concepts and have a basic understanding of control systems.
+Welcome to the DC Motor Control Library designed for the Raspberry Pi 4 utilizing Python. This library provides robust functionality for controlling DC motor position (i.e. angle) using Pulse Width Modulation (PWM), and is tailored for use with drivers such as the L298N motor driver. To successfully use this library, you'll need to understand the basics about DC brushed DC motors, motor encoders (incremental ones in this case), basics about using a raspberry pi, control systems, and a basic notion of embedded systems and micro-controller programming.
 
 # Introductory concepts
 
@@ -12,6 +12,8 @@ Interrupts: Handling real-time events accurately is crucial in motor control. Th
 
 DC Motor with Encoder: Encoders provide necessary feedback for accurate control over motor position and speed, which is indispensable for closed-loop control systems.
 
+For more information about controlling DC brushed motors with encoders, refer to the following source: https://curiores.com/positioncontrol
+
 
 # Features
 
@@ -21,4 +23,16 @@ Control Methods: Utilize intuitive control methods such as .move(degrees) to spe
 
 PID Parameters Customization: The library offers flexibility in defining PID control parameters, enabling you to fine-tune the motor control system tailored to your project's requirements.
 
+This library assumes the use of incremental motor encoders. For more information, refer to the following source: https://www.dynapar.com/technology/encoder_basics/motor_encoders/
+
+# Hardware
+You can you any motor driver and DC motors you desire, provided you understand how to use them. For our example the following hardware is used:
+
+Motor driver : L298N https://www.cimech3d.cl/producto/driver-l298n-doble-accionamiento-para-arduino/
+Motors: DC brushed motors with incremental encoder:  https://www.amazon.com/uxcell-Motor-Encoder-463RPM-Ratio/dp/B0792T5445
+
 # Getting started
+
+
+# Circuit schematic
+Provided bellow is an example implementation of the hardware wiring between the Raspberry Pi 4, two DC brushed motors with their encoders, and the L298N motor driver. This library is not limited to the hardware used in the example implementation.
