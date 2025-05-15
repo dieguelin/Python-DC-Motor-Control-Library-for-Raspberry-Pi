@@ -29,10 +29,10 @@ This library assumes the use of incremental motor encoders. For more information
 You can you any motor driver and DC motors you desire, provided you understand how to use them. For our example the following hardware is used:
 
 Motor driver : L298N https://www.cimech3d.cl/producto/driver-l298n-doble-accionamiento-para-arduino/
-![Alt Text](H-bridge-driver.jpg)
+<img src="H-bridge-driver.jpg" alt="Alt Text" width="500" height="auto">
 
-Motors: DC brushed motors with incremental encoder:  https://www.amazon.com/uxcell-Motor-Encoder-463RPM-Ratio/dp/B0792T5445
-<img src="dc_motor.png" alt="Alt Text" width="200" height="auto">
+Motor: DC brushed motor with incremental encoder:  https://www.amazon.com/uxcell-Motor-Encoder-463RPM-Ratio/dp/B0792T5445
+<img src="dc_motor.png" alt="Alt Text" width="500" height="auto">
 
 
 # Getting started
@@ -41,4 +41,4 @@ Motors: DC brushed motors with incremental encoder:  https://www.amazon.com/uxce
 # Circuit schematic
 Provided bellow is an example implementation of the hardware wiring between the Raspberry Pi 4, two DC brushed motors with their encoders, and the L298N motor driver. This library is not limited to the hardware used in the example implementation.
 
-![Alt Text](circuit_schematic.png)
+<img src="circuit_schematic.png" alt="Alt Text" width="500" height="auto">
