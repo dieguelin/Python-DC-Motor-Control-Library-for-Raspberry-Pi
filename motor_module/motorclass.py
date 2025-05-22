@@ -4,7 +4,7 @@ import time as t
 class MotorInstance:
 
     def __init__(self,PIN_PWM = 18,PIN_OUT1 = 25,PIN_OUT2 = 9,PIN_IN1 = 22,PIN_IN2 = 23,
-                  freq = 50, kp = 2.1, kd = 0.05, ki = 0, Ts = 0.01, revs = 492, count = 0):
+                  freq = 50, kp = 2.1, kd = 0.05, ki = 0, Ts = 0.01, revs = 492):
 
         gpio.setmode(gpio.BCM)
         self.PIN_PWM = PIN_PWM
@@ -19,7 +19,7 @@ class MotorInstance:
         self.Ts = Ts
         self.revs = revs
         self.n = 100
-        self.count = count
+        self.count = 0
 
         gpio.setup(self.PIN_OUT1,gpio.OUT)
         gpio.setup(self.PIN_OUT2,gpio.OUT)

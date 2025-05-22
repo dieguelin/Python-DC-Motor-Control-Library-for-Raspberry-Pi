@@ -2,7 +2,7 @@
 
 Welcome to the DC Motor Control Library designed for the Raspberry Pi 4 utilizing Python. This library provides robust functionality for controlling DC motor position (i.e. angle) using Pulse Width Modulation (PWM), and is tailored for use with drivers such as the L298N motor driver. To successfully use this library, you'll need to understand the basics about DC brushed DC motors, motor encoders (incremental ones in this case), basics about using a raspberry pi, control systems, and a basic notion of embedded systems and micro-controller programming.
 
-# Introductory concepts
+# Introductory Concepts
 
 PID Control: The library incorporates PID (Proportional-Integral-Derivative) control techniques to optimize motor performance. PID controllers use feedback from encoders to adjust motor commands dynamically, ensuring stable and accurate motor control, particularly under varying load conditions.
 
@@ -21,7 +21,7 @@ Port Mapping and Instantiation: The library provides a class where you can confi
 
 Control Methods: Utilize intuitive control methods such as .move(degrees) to specify precise motor movements, enhancing ease of use in motor management tasks.
 
-PID Parameters Customization: The library offers flexibility in defining PID control parameters, enabling you to fine-tune the motor control system tailored to your project's requirements.
+PID Parameters Customization: The library offers flexibility in defining PID control parameters, enabling you to fine-tune the motor control system tailored to your project's requirements. Additionally, class instantiation comes with pre-defined values for PID, gpio pin mappings, and others. It is recommended to take a look at the class and see what comes pre-configured. These values can be changed during instantiation simply specifying the desired value in the instance arguement.
 
 This library assumes the use of incremental motor encoders. For more information, refer to the following source: https://www.dynapar.com/technology/encoder_basics/motor_encoders/
 
@@ -42,6 +42,16 @@ Motor: DC brushed motor with incremental encoder:  https://www.amazon.com/uxcell
 
 # Getting started
 
+1. Clone repo in desired folder. This must be done inside a Raspberry Pi (guaranteed to work under Raspberry pi 4).
+2. Inside the folder, install a virtual environment (see: https://docs.python.org/3/library/venv.html)
+3. Activate virtual environment using the command: `source /path/to/env/bin/activate`
+4. install RPi.GPIO library using pip command: `pip install RPi.GPIO` (can use alternative package administrator though pip is recommended).
+5. Test library as a module. In source folder, run: python -m motor_module.motorclass . This will run code inside `if __name__ == "__main__"`. Alternatively, you can test using the main.py file which direcrtly imports module.
+
+# Example
+
+Example instantiation where raspberry pi pin mappings are specified:
+`MotorInstance(PIN_PWM = 27,PIN_OUT1 = 1,PIN_OUT2 = 0,PIN_IN1 = 19,PIN_IN2 = 16)`
 
 # Circuit schematic
 Provided bellow is an example implementation of the hardware wiring between the Raspberry Pi 4, two DC brushed motors with their encoders, and the L298N motor driver. This library is not limited to the hardware used in the example implementation.
