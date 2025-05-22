@@ -31,13 +31,13 @@ You can you any motor driver and DC motors you desire, provided you understand h
 Motor driver : L298N https://www.cimech3d.cl/producto/driver-l298n-doble-accionamiento-para-arduino/
 
 <div align="center">
-  <img src="H-bridge-driver.jpg" alt="Alt Text"  width="500" height="auto">
+  <img src="images/H-bridge-driver.jpg" alt="Alt Text"  width="500" height="auto">
 </div>
 
 Motor: DC brushed motor with incremental encoder:  https://www.amazon.com/uxcell-Motor-Encoder-463RPM-Ratio/dp/B0792T5445
 
 <div align="center">
-  <img src="dc_motor.png" alt="Alt Text"  width="500" height="auto">
+  <img src="images/dc_motor.png" alt="Alt Text"  width="500" height="auto">
 </div>
 
 # Getting started
@@ -47,5 +47,5 @@ Motor: DC brushed motor with incremental encoder:  https://www.amazon.com/uxcell
 Provided bellow is an example implementation of the hardware wiring between the Raspberry Pi 4, two DC brushed motors with their encoders, and the L298N motor driver. This library is not limited to the hardware used in the example implementation.
 
 <div align="center">
-  <img src="circuit_schematic.png" alt="Alt Text"  width="500" height="auto">
+  <img src="images/circuit_schematic.png" alt="Alt Text"  width="500" height="auto">
 </div>
