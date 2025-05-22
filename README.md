@@ -46,7 +46,7 @@ Motor: DC brushed motor with incremental encoder:  https://www.amazon.com/uxcell
 2. Inside the folder, install a virtual environment (see: https://docs.python.org/3/library/venv.html)
 3. Activate virtual environment using the command: `source /path/to/env/bin/activate`
 4. install RPi.GPIO library using pip command: `pip install RPi.GPIO` (can use alternative package administrator though pip is recommended).
-5. Test library as a module. In source folder, run: python -m motor_module.motorclass . This will run code inside `if __name__ == "__main__"`. Alternatively, you can test using the main.py file which direcrtly imports module.
+5. Test library as a module. In source folder, run: `python -m motor_module.motorclass` . This will run code inside `if __name__ == "__main__"`. Alternatively, you can test using the main.py file which direcrtly imports module.
 
 # Example Code
 
