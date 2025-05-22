@@ -18,7 +18,7 @@ class MotorInstance:
         self.ki = ki
         self.Ts = Ts
         self.revs = revs
-        self.n = 100
+        self.n = 100 #PWM limit. maximum is 100%
         self.count = 0
 
         gpio.setup(self.PIN_OUT1,gpio.OUT)
@@ -52,13 +52,10 @@ class MotorInstance:
                 #print('ccw')
                 self.count -= 1
                 #print(cnt)
-        else:
-            self.count += 0
-            #print(cnt)
         return self.count
 
     def move(self, deg):
-        self.count = 0
+        
         Eacum = 0
         x = deg * self.revs / 360
         E = [x]
@@ -101,7 +98,8 @@ class MotorInstance:
             # Stop if error is consistently small
             if abs(e) <= 7 and len(set(E[-15:])) == 1:
                 stopper = True
-
+        
+        self.count = 0 #reset count
         self.stop_motor()  # Stop motor once in desired position
 
     def __repr__(self):
