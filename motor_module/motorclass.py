@@ -4,8 +4,12 @@ import time as t
 class MotorInstance:
 
     def __init__(self,PIN_PWM = 18,PIN_OUT1 = 25,PIN_OUT2 = 9,PIN_IN1 = 22,PIN_IN2 = 23,
-                  freq = 50, kp = 2.1, kd = 0.05, ki = 0, Ts = 0.01, revs = 492):
+                  freq = 50, kp = 2.1, kd = 0.05, ki = 0, Ts = 0.01, n=100):
 
+        # Validate n parameter
+        if not abs(n) < 100:
+            raise ValueError(f"Parameter 'n' must be between 0 and 100, got {n}")
+        
         gpio.setmode(gpio.BCM)
         self.PIN_PWM = PIN_PWM
         self.PIN_OUT1 = PIN_OUT1
@@ -17,8 +21,8 @@ class MotorInstance:
         self.kd = kd
         self.ki = ki
         self.Ts = Ts
-        self.revs = revs
-        self.n = 100 #PWM limit. maximum is 100%
+        self.revs = 492 #amount of ticks per cycle for the specific motor used.
+        self.n = n #PWM limit. maximum is 100%
         self.count = 0
 
         gpio.setup(self.PIN_OUT1,gpio.OUT)
