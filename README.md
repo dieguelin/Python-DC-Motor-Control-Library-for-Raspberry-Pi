@@ -26,7 +26,7 @@ PID Parameters Customization: The library offers flexibility in defining PID con
 This library assumes the use of incremental motor encoders. For more information, refer to the following source: https://www.dynapar.com/technology/encoder_basics/motor_encoders/
 
 # Example Hardware
-You can you any motor driver and DC motors you desire, provided you understand how to use them. For our example the following hardware is used:
+You can use any motor driver or DC motors you wish, provided you understand how to use them and integrate them with the raspberry pi. For our example, the following hardware is used:
 
 Motor driver : L298N https://www.cimech3d.cl/producto/driver-l298n-doble-accionamiento-para-arduino/
 
@@ -48,10 +48,12 @@ Motor: DC brushed motor with incremental encoder:  https://www.amazon.com/uxcell
 4. install RPi.GPIO library using pip command: `pip install RPi.GPIO` (can use alternative package administrator though pip is recommended).
 5. Test library as a module. In source folder, run: python -m motor_module.motorclass . This will run code inside `if __name__ == "__main__"`. Alternatively, you can test using the main.py file which direcrtly imports module.
 
-# Example
+# Example Code
 
-Example instantiation where raspberry pi pin mappings are specified:
+Example instantiation where RaspberryPi pin mappings are specified:
 `MotorInstance(PIN_PWM = 27,PIN_OUT1 = 1,PIN_OUT2 = 0,PIN_IN1 = 19,PIN_IN2 = 16)`
+
+Note: This library uses the BCM pin convention at the moment. Library could be updated to handle both BCM and BOARD.
 
 # Circuit schematic
 Provided bellow is an example implementation of the hardware wiring between the Raspberry Pi 4, two DC brushed motors with their encoders, and the L298N motor driver. This library is not limited to the hardware used in the example implementation.
