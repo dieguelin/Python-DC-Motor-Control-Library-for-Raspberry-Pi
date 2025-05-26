@@ -7,7 +7,7 @@ class MotorInstance:
                   freq = 50, kp = 2.1, kd = 0.05, ki = 0, Ts = 0.01, n=100):
 
         # Validate n parameter
-        if not abs(n) < 100:
+        if abs(n) > 100:
             raise ValueError(f"Parameter 'n' must be between 0 and 100, got {n}")
         
         gpio.setmode(gpio.BCM)
