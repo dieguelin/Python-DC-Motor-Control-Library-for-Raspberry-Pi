@@ -1,19 +1,18 @@
 # Python-DC-Motor-Control-Library-for-Raspberry-Pi
 
-Welcome to the DC Motor Control Library designed for the Raspberry Pi 4 utilizing Python. This library provides robust functionality for controlling DC motor position (i.e. angle) using Pulse Width Modulation (PWM), and is tailored for use with drivers such as the L298N motor driver. To successfully use this library, you'll need to understand the basics about DC brushed DC motors, motor encoders (incremental ones in this case), basics about using a raspberry pi, control systems, and a basic notion of embedded systems and micro-controller programming.
+Welcome to the DC Motor Control Library designed for the Raspberry Pi 4 with Python. This library provides robust functionality for controlling DC motor position (i.e. angle) using PID control. To successfully use and understand this library, you'll need to understand the basics about brushed DC motors, incremental motor encoders, basics about using a Raspberry Pi and micro-controller programming, and control systems especially PID control.
 
 # Introductory Concepts
 
-PID Control: The library incorporates PID (Proportional-Integral-Derivative) control techniques to optimize motor performance. PID controllers use feedback from encoders to adjust motor commands dynamically, ensuring stable and accurate motor control, particularly under varying load conditions.
+PID Control: The library incorporates PID (Proportional-Integral-Derivative) for conrolling position. PID controllers use feedback from encoders to adjust motor commands dynamically, ensuring stable and accurate motor control, particularly under varying load conditions. These parameters can be optimized for specific motor loads (e.g. connecting motor to wheel subject to heavy load).
 
-Pulse Width Modulation (PWM): PWM is an effective way to control motor speed and direction by varying the width of the pulses, enabling precise adjustments in motor operations.
+Pulse Width Modulation (PWM): PWM is an effective way to control motor speed and direction by varying the width of the pulses, enabling precise adjustments in motor operations. PWM varies the intensity of the voltage to the motor. 
 
-Interrupts: Handling real-time events accurately is crucial in motor control. This library uses interrupts to promptly manage tasks like speed monitoring and direction changes, enhancing overall system responsiveness.
+Interrupts: Handling real-time events accurately is crucial in motor control. This library uses interrupts from the encoder to read current motor position in relation to the desired position. This is used as input for the controller. 
 
 DC Motor with Encoder: Encoders provide necessary feedback for accurate control over motor position and speed, which is indispensable for closed-loop control systems.
 
 For more information about controlling DC brushed motors with encoders, refer to the following source: https://curiores.com/positioncontrol
-
 
 # Features
 
