@@ -4,7 +4,7 @@ import time as t
 class MotorInstance:
 
     def __init__(self,PIN_PWM = 18,PIN_OUT1 = 25,PIN_OUT2 = 9,PIN_IN1 = 22,PIN_IN2 = 23,
-                  freq = 50, kp = 2.1, kd = 0.05, ki = 0, Ts = 0.01, n=100):
+                  freq = 50, kp = 2.1, kd = 0.05, ki = 0, Ts = 0.01, n=100, margin = 10):
 
         # Validate n parameter
         if abs(n) > 100:
@@ -24,6 +24,7 @@ class MotorInstance:
         self.revs = 492 #amount of ticks per cycle for the specific motor used.
         self.n = n #PWM limit. maximum is 100%
         self.count = 0
+        self.margin = margin
 
         gpio.setup(self.PIN_OUT1,gpio.OUT)
         gpio.setup(self.PIN_OUT2,gpio.OUT)
@@ -100,11 +101,12 @@ class MotorInstance:
                 E.pop(0)
 
             # Stop if error is consistently small
-            if abs(e) <= 7 and len(set(E[-15:])) == 1:
+            if abs(e) <= self.margin and len(set(E[-15:])) == 1:
                 stopper = True
         
         self.count = 0 #reset count
         self.stop_motor()  # Stop motor once in desired position
+        self.pwm_in.stop() # stop pwm signal
 
     def __repr__(self):
         return (f"MotorInstance(\n"

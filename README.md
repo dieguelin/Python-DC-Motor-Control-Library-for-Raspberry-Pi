@@ -47,6 +47,8 @@ Motor: DC brushed motor with incremental encoder:  https://www.amazon.com/uxcell
 4. install RPi.GPIO library using pip command: `pip install RPi.GPIO` (can use alternative package administrator though pip is recommended).
 5. Test library as a module. In source folder, run: `python -m motor_module.motorclass` . This will run code inside `if __name__ == "__main__"`. Alternatively, you can test using the main.py file which direcrtly imports module.
 
+WARNING: Please be careful in choosing the correct GPIO pins. The code won't consider inappropriate GPIO pins. Choosing incorrect GPIO pins can cause unexpected behavior.
+
 # Example Code
 
 Example instantiation where RaspberryPi pin mappings are specified:
@@ -56,6 +58,8 @@ Note: This library uses the BCM pin convention at the moment. Library could be u
 
 # Circuit schematic
 Provided bellow is an example implementation of the hardware wiring between the Raspberry Pi 4, two DC brushed motors with their encoders, and the L298N motor driver. This library is not limited to the hardware used in the example implementation.
+
+Note: The current image shows the test mappings for the implementation made by library developer. For one of the motors, the control logic uses GPIO 0 and 1. Please do NOT use these GPIOs as they are used for I2C ID and EEPROM. Using these GPIO pins has caused unexpected behavior. Please use other GPIOs like GPIO 5 and 6.
 
 <div align="center">
   <img src="images/circuit_schematic.png" alt="Alt Text"  width="500" height="auto">
